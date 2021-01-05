@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CodeArchives</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="Keywords" content="Java,Struts,Spring,JSF,Java Server Faces,Hibernate,Webservices,Video,AJAX,REST,Design Pattern,XML,tutorial,HTML,DHTML,CSS,XSL,XHTML,JavaScript,DOM,programming,learning,beginner's guide,howto,reference,free,examples,samples,source code,demos,tips,links,FAQ,forms,frames,Cascading Style Sheets,Dynamic HTML,HTMLGuide">
+    <meta name="Description" content="Java Spring Struts JSF Webservices AJAX REST Video Tutorial HTML XHTML CSS JavaScript XML SQL Tutorials References Examples">
+    <link href='favicon.ico' rel='icon' type='image/x-icon' />
+    <script type="text/javascript" src="//www.kcak11.com/scripts/fluid-iframe-container.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9NEPP637L"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-L9NEPP637L');
+    </script>
+    <script type="text/javascript" src="https://github.com/npx-bin/js-queryparams/releases/download/1.1.1/index.js"></script>
+</head>
+
+<body>
+    <noscript>Your browser does not support JavaScript!</noscript>
+    <script type="text/javascript">
+        window.addEventListener("message", function (e) {
+            if (e.data === "GET_URL_INFO") {
+                document.querySelector("iframe#mainFrame").contentWindow.postMessage({ urlInfo: window.location.href }, "*");
+            } else if (e.data === "CLOSE_WIN") {
+                window.close();
+            } else if (e.data === "FEEDBACK_WINDOW_RESIZE") {
+                window.resizeTo(790, 650);
+            }
+        }, false);
+    </script>
+    <script type="text/javascript">
+        var link = queryParams.get("link");
+        var tutorialID = queryParams.get("tutorialID") || "";
+        var urlMap = {
+            "TOS": { url: "https://code-archives.appspot.com/archive/Action/catos/", title: "CodeArchives - TERMS OF SERVICE" },
+            "FEEDBACK": { url: "https://code-archives.appspot.com/archive/Action/userFeedback/", title: "CodeArchives - User Feedback" },
+            "TUTORIAL": { url: "https://code-archives.appspot.com/archive/Action/viewTutorial/?tutorialID=" + tutorialID, title: "CodeArchives - Online Tutorials" }
+        };
+        new fluidIframeContainer(urlMap[link]['url']);
+        document.title = urlMap[link]['title'] || "Code Archives";
+        gtag('event', 'screen_view');
+    </script>
+</body>
+
+</html>

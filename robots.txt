@@ -1,0 +1,4 @@
+User-agent: *
+Allow: *
+
+Sitemap: https://www.kcak11.com/codearchives/sitemap.xml

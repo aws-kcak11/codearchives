@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Code Archives</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="Keywords" content="Java,Struts,Spring,JSF,Java Server Faces,Hibernate,Webservices,Video,AJAX,REST,Design Pattern,XML,tutorial,HTML,DHTML,CSS,XSL,XHTML,JavaScript,DOM,programming,learning,beginner's guide,howto,reference,free,examples,samples,source code,demos,tips,links,FAQ,forms,frames,Cascading Style Sheets,Dynamic HTML,HTMLGuide">
+    <meta name="Description" content="Java Spring Struts JSF Webservices AJAX REST Video Tutorial HTML XHTML CSS JavaScript XML SQL Tutorials References Examples">
+    <link href='favicon.ico' rel='icon' type='image/x-icon' />
+    <script type="text/javascript" src="//www.kcak11.com/scripts/fluid-iframe-container.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9NEPP637L"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-L9NEPP637L');
+    </script>
+</head>
+
+<body>
+    <noscript>Your browser does not support JavaScript!</noscript>
+    <script type="text/javascript">
+        var hashChangedViaApp = false;
+        window.addEventListener("message", function (e) {
+            if (e.data === "GET_URL_INFO") {
+                document.querySelector("iframe#mainFrame").contentWindow.postMessage({ urlInfo: window.location.href }, "*");
+            } else if (e.data.urlStateInfo) {
+                window.location.hash = e.data.urlStateInfo.indexOf("#") === 0 ? e.data.urlStateInfo.slice(1) : e.data.urlStateInfo;
+                hashChangedViaApp = true;
+                setTimeout(function () {
+                    hashChangedViaApp = false;
+                }, 500);
+            } else if (e.data.docTitle) {
+                document.title = e.data.docTitle;
+                gtag('event', 'screen_view');
+            }
+        }, false);
+    </script>
+    <script type="text/javascript">
+        var _url = "";
+        if (window.location.hash && window.location.hash.indexOf("archive/Action/") > -1) {
+            _url = "//code-archives.appspot.com/archive/Action/loadArchive/" + ((window.location.hash.indexOf("#") === 0) ? window.location.hash : "#" + window.location.hash);
+            new fluidIframeContainer(_url);
+        } else {
+            _url = "//code-archives.appspot.com/";
+            new fluidIframeContainer(_url);
+        }
+        gtag('event', 'screen_view');
+        window.onhashchange = function (e) {
+            if (!hashChangedViaApp) {
+                var frameElem = document.querySelector("iframe#mainFrame");
+                if (frameElem) {
+                    frameElem.src = "//code-archives.appspot.com/archive/Action/loadArchive/" + ((window.location.hash.indexOf("#") === 0) ? window.location.hash : "#" + window.location.hash);
+                }
+            }
+        };
+    </script>
+</body>
+
+</html>
